@@ -10,12 +10,30 @@ body {
   display: grid;
   place-content: center;
   min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.tilting-card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  position: relative;
+  border: 3px solid lime;
+  padding: 2rem;
 }
 
 .tilting-card-content {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+
   display: grid;
   place-content: center;
   text-align: center;
   box-shadow: var(--shadow);
   padding: 2rem;
+  aspect-ratio: 1 / 2;
+}
+
+.mouse-position-tracker {
+  position: absolute;
 }
